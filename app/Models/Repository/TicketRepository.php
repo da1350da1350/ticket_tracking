@@ -12,9 +12,9 @@ class TicketRepository
         Ticket::create([$data]);
     }
 
-    public function UpdateStatus(int $id, string $status)
+    public function Update(int $id, array $content)
     {
-        Ticket::where('id', $id)->update(['status' => $status]);
+        Ticket::where('id', $id)->update($content);
     }
 
 }
